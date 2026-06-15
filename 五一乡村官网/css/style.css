@@ -1,0 +1,11 @@
+body {
+    font-family: "微软雅黑", sans-serif;
+    line-height: 1.8;
+}
+.carousel-item img {
+    height: 500px;
+    object-fit: cover;
+}
+section {
+    padding: 60px 0;
+}
