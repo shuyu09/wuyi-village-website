@@ -1,0 +1,76 @@
+/* 全局基础样式 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: "微软雅黑", "Microsoft Yahei", sans-serif;
+    line-height: 1.8;
+    color: #333;
+    background-color: #fff;
+}
+
+/* 固定导航栏留白 */
+.nav-padding {
+    height: 56px;
+}
+
+/* 轮播图样式 */
+.carousel-img {
+    height: 520px;
+    object-fit: cover;
+}
+.carousel-caption {
+    background-color: rgba(0,0,0,0.4);
+    padding: 20px;
+    border-radius: 8px;
+}
+
+/* 板块标题统一样式 */
+.section-title {
+    color: #2e7d32;
+    font-weight: bold;
+    border-bottom: 3px solid #2e7d32;
+    display: inline-block;
+    padding-bottom: 8px;
+}
+
+/* 二维码区域 */
+.qrcode-box img {
+    transition: transform 0.3s ease;
+}
+.qrcode-box img:hover {
+    transform: scale(1.05);
+}
+
+/* 链接样式 */
+a {
+    transition: color 0.3s;
+    text-decoration: none;
+}
+a:hover {
+    color: #81c784 !important;
+}
+
+/* 卡片悬浮效果 */
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15) !important;
+}
+
+/* 移动端适配（手机端优化） */
+@media (max-width: 768px) {
+    .carousel-img {
+        height: 300px;
+    }
+    .carousel-caption h2 {
+        font-size: 1.2rem;
+    }
+    .section-title {
+        font-size: 1.4rem;
+    }
+}
