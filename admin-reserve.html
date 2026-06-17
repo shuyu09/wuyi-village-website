@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>管理员后台 - 预约记录查询</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="images/village/view.jpg">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">五一村 管理员后台</a>
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">返回首页</a></li>
+                    <li class="nav-item"><a class="nav-link" href="reserve.html">预约页面</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="nav-padding"></div>
+
+    <section class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5 section-title">🔒 管理员 全部预约查询</h2>
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <!-- 口令验证区域 -->
+                    <div class="card shadow mb-5">
+                        <div class="card-header bg-danger text-white">
+                            <h5 class="mb-0">请输入管理员口令</h5>
+                        </div>
+                        <div class="card-body">
+                            <div class="mb-3">
+                                <label class="form-label">管理员口令</label>
+                                <input type="text" class="form-control" id="adminPwd" placeholder="请输入查询口令">
+                                <p class="text-muted mt-2">输入固定口令：查询所有预约记录</p>
+                            </div>
+                            <button class="btn btn-danger w-100" onclick="checkAdminPwd()">验证并查询全部预约</button>
+                        </div>
+                    </div>
+
+                    <!-- 全部预约结果展示区 -->
+                    <div class="card shadow">
+                        <div class="card-header bg-success text-white">
+                            <h5 class="mb-0">全部预约记录</h5>
+                        </div>
+                        <div class="card-body" id="allResResult">
+                            <div class="alert alert-info text-center">请先输入管理员口令进行查询</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <p class="text-center mb-0">© 2026 浠水县五一村 管理后台</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

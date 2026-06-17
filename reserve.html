@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>采摘预约 - 浠水县五一村</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="images/village/view.jpg">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-success fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">五一村数字乡村</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navMenu">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">首页</a></li>
+                    <li class="nav-item"><a class="nav-link" href="village.html">乡村风貌</a></li>
+                    <li class="nav-item"><a class="nav-link" href="fruit.html">特色鲜果</a></li>
+                    <li class="nav-item"><a class="nav-link" href="craft.html">非遗鱼丸</a></li>
+                    <li class="nav-item"><a class="nav-link" href="redculture.html">红色文化</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="reserve.html">采摘预约</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="nav-padding"></div>
+
+    <section class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5 section-title">📅 果园采摘在线预约</h2>
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <!-- 1. 预约提交表单 -->
+                    <div class="card shadow mb-5">
+                        <div class="card-header bg-success text-white">
+                            <h5 class="mb-0">采摘预约表单</h5>
+                        </div>
+                        <div class="card-body">
+                            <div class="mb-3">
+                                <label class="form-label">预约人姓名</label>
+                                <input type="text" class="form-control" id="resName" placeholder="请输入姓名">
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">联系电话</label>
+                                <input type="tel" class="form-control" id="resPhone" placeholder="请输入手机号码">
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">预约采摘日期</label>
+                                <input type="date" class="form-control" id="resDate">
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">同行人数</label>
+                                <input type="number" class="form-control" id="resNum" placeholder="请输入人数" min="1">
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">备注信息</label>
+                                <textarea class="form-control" id="resRemark" rows="3" placeholder="如有特殊需求可在此填写"></textarea>
+                            </div>
+                            <button class="btn btn-success w-100" onclick="submitReserve()">提交预约</button>
+                        </div>
+                    </div>
+
+                    <!-- 2. 个人预约查询（游客入口） -->
+                    <div class="card shadow mb-5">
+                        <div class="card-header bg-primary text-white">
+                            <h5 class="mb-0">查询我的预约</h5>
+                        </div>
+                        <div class="card-body">
+                            <div class="mb-3">
+                                <label class="form-label">输入你的姓名查询预约</label>
+                                <input type="text" class="form-control" id="queryName" placeholder="请填写预约时的姓名">
+                            </div>
+                            <button class="btn btn-primary w-100" onclick="queryMyReserve()">查询</button>
+
+                            <!-- 个人预约结果展示区 -->
+                            <div class="mt-4" id="myResResult"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <p class="text-center mb-0">© 2026 浠水县五一村 数字乡村官网 | <a href="index.html" class="text-white">返回首页</a></p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

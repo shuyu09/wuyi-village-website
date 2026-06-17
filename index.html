@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>浠水县五一村 - 数字乡村官网 | 首页</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="images/village/view.jpg">
+</head>
+<body>
+    <!-- 顶部导航栏 - 跨页面跳转 -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-success fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">五一村数字乡村</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navMenu">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="index.html">首页</a></li>
+                    <li class="nav-item"><a class="nav-link" href="village.html">乡村风貌</a></li>
+                    <li class="nav-item"><a class="nav-link" href="fruit.html">特色鲜果</a></li>
+                    <li class="nav-item"><a class="nav-link" href="craft.html">非遗鱼丸</a></li>
+                    <li class="nav-item"><a class="nav-link" href="redculture.html">红色文化</a></li>
+                    <li class="nav-item"><a class="nav-link" href="reserve.html">采摘预约</a></li>
+                    <li class="nav-item"><a class="nav-link" href="admin-reserve.html">管理后台</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="nav-padding"></div>
+
+    <!-- 首页轮播图 -->
+    <section id="home" class="py-0">
+        <div id="carouselExample" class="carousel slide carousel-fade" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="images/banner/bg1.jpg" class="d-block w-100 carousel-img" alt="五一村全景">
+                    <div class="carousel-caption">
+                        <h2>数字赋能乡村 青春助力振兴</h2>
+                        <p>湖北省黄冈市浠水县五一村 综合服务展示平台</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="images/banner/bg2.jpg" class="d-block w-100 carousel-img" alt="生态果园">
+                    <div class="carousel-caption">
+                        <h2>生态鲜果 现摘现发</h2>
+                        <p>原生态种植，打造绿色农产品品牌</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="images/banner/bg3.jpg" class="d-block w-100 carousel-img" alt="非遗鱼丸">
+                    <div class="carousel-caption">
+                        <h2>传承非遗技艺 守护乡土味道</h2>
+                        <p>百年手工鱼丸，地道民俗美食</p>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </button>
+        </div>
+    </section>
+
+    <!-- 小程序入口 -->
+    <section class="py-5 text-center bg-success text-white">
+        <div class="container">
+            <h3 class="mb-3">线上综合服务平台</h3>
+            <p class="fs-5">扫码进入微信小程序，一站式选购、预约、浏览文化内容</p>
+            <div class="mt-4 qrcode-box">
+                <img src="images/qrcode/mini_code.jpg" width="220" alt="小程序码" class="bg-white p-3 rounded shadow">
+                <p class="mt-3 fs-6">微信长按识别二维码进入</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 留言论坛板块（含表情、图片、分页、防重复点赞） -->
+<section class="py-5 bg-light">
+    <div class="container">
+        <h2 class="text-center mb-5 section-title">💬 留言论坛 | 交流互动</h2>
+
+        <!-- 1. 发布留言区域 -->
+        <div class="card shadow mb-5">
+            <div class="card-header bg-success text-white">
+                <h5 class="mb-0">发布新留言</h5>
+            </div>
+            <div class="card-body">
+                <div class="mb-3">
+                    <label class="form-label">昵称</label>
+                    <input type="text" class="form-control" id="nickname" placeholder="请输入你的昵称">
+                </div>
+
+                <!-- 表情选择器 -->
+                <div class="mb-2">
+                    <span class="text-muted">选择表情：</span>
+                    <span class="emoji-item" onclick="insertEmoji('😀')">😀</span>
+                    <span class="emoji-item" onclick="insertEmoji('😃')">😃</span>
+                    <span class="emoji-item" onclick="insertEmoji('😄')">😄</span>
+                    <span class="emoji-item" onclick="insertEmoji('😊')">😊</span>
+                    <span class="emoji-item" onclick="insertEmoji('🥰')">🥰</span>
+                    <span class="emoji-item" onclick="insertEmoji('👍')">👍</span>
+                    <span class="emoji-item" onclick="insertEmoji('👏')">👏</span>
+                    <span class="emoji-item" onclick="insertEmoji('🎉')">🎉</span>
+                    <span class="emoji-item" onclick="insertEmoji('🌿')">🌿</span>
+                    <span class="emoji-item" onclick="insertEmoji('🍑')">🍑</span>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">留言内容</label>
+                    <textarea class="form-control" id="content" rows="3" placeholder="分享想法、咨询问题、交流体验"></textarea>
+                </div>
+
+                <!-- 图片上传区域 -->
+                <div class="mb-3">
+                    <label class="form-label">上传图片（选填）</label>
+                    <input type="file" class="form-control" id="imgUpload" accept="image/*" onchange="previewImage(event)">
+                    <div id="imgPreview" class="mt-2 d-none">
+                        <img id="previewImg" style="max-width:200px;max-height:200px;border-radius:4px;">
+                    </div>
+                </div>
+
+                <button class="btn btn-success" onclick="publishMsg()">发布留言</button>
+            </div>
+        </div>
+
+        <!-- 2. 留言列表容器 -->
+        <div id="msgList"></div>
+
+        <!-- 3. 分页按钮区域 -->
+        <div id="pageBox" class="d-flex justify-content-center mt-5"></div>
+    </div>
+</section>
+
+    <!-- 联系我们 -->
+    <section class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5 section-title">📞 联系我们</h2>
+            <div class="row text-center">
+                <div class="col-md-4 mb-4">
+                    <div class="card shadow h-100">
+                        <div class="card-body">
+                            <h5>村委会办公</h5>
+                            <p>地址：湖北省黄冈市浠水县巴河镇五一村村委会</p>
+                            <p>办公时间：工作日 8:30 - 17:30</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card shadow h-100">
+                        <div class="card-body">
+                            <h5>农产品咨询</h5>
+                            <p>鲜果、非遗鱼丸订购、采摘预约</p>
+                            <p>优先使用微信小程序在线咨询</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card shadow h-100">
+                        <div class="card-body">
+                            <h5>实践团队</h5>
+                            <p>华中农业大学「青力服务・数助乡村」实践团</p>
+                            <p>专注数字助农、文化传承、公益帮扶</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5>关于本站</h5>
+                    <p>本网站为华中农业大学2026年暑期社会实践成果，依托数字技术助力浠水县五一村乡村振兴。</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <h5>快速导航</h5>
+                    <p>
+                        <a href="index.html" class="text-white">首页</a> |
+                        <a href="village.html" class="text-white">乡村风貌</a> |
+                        <a href="fruit.html" class="text-white">特色鲜果</a> |
+                        <a href="craft.html" class="text-white">非遗鱼丸</a> |
+                        <a href="redculture.html" class="text-white">红色文化</a> |
+                        <a href="reserve.html" class="text-white">采摘预约</a>
+                    </p>
+                </div>
+            </div>
+            <hr class="my-3 bg-secondary">
+            <p class="text-center mb-0">© 2026 浠水县五一村 数字乡村官网 | 华中农业大学实践团 运维<br>本网站仅用于乡村公益服务，禁止商用</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
